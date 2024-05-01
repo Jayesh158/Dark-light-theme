@@ -4,17 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theme changer</title>
+    <style>
+        .head{
+            text-align: center;
+            margin: 25px;
+        }
+        .text{
+            font-size: 20px;
+            padding: 20px;
+            margin: 30px;
+            border-bottom: 2px dashed black;
+        }
+        .img{
+            height: 50px;
+            cursor: pointer;
+        }
+        .darkMode{
+            background-color: #000;
+            color: #fff;
+        }
+        .lightMode{
+            background-color: #fff;
+            color: #000;;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <h1 class="head">HTML</h1>
-        <p class="text">HTML stands for Hyper Text Markup Language <br>
+    <div class="container" id="content">
+        <h1 class="head" id="head1">HTML</h1>
+        <p class="text" id="text1">HTML stands for Hyper Text Markup Language <br>
             HTML is the standard markup language for creating Web pages <br>
             HTML describes the structure of a Web page <br>
             HTML consists of a series of elements <br>
             HTML elements tell the browser how to display the content <br>
             HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
         </p>
+        <h1 class="head" id="head2">CSS</h1>
+        <p class="text" id="text2">
+            CSS stands for Cascading Style Sheets<br>
+            CSS describes how HTML elements are to be displayed on screen, paper, or in other media<br>
+            CSS saves a lot of work. It can control the layout of multiple web pages all at once<br>
+            External stylesheets are stored in CSS files<br>
+        </p>
     </div>
+    <img src="Dark.png" class="img" id="img1" onclick="darkMode()">
+    <img src="Light.png" class="img" id="img2" onclick="lightMode()">
+
+    <script>
+        function darkMode(){
+            const darkColor = document.getElementById('content');
+            darkColor.className = darkMode
+        }
+        function lightMode(){
+            const lightColor = document.getElementById('content');
+            lightColor.className = lightMode
+        }
+    </script>
 </body>
 </html>
